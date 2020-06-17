@@ -1,0 +1,32 @@
+{
+	"extends": "react-app",
+	"plugins": [
+		"import"
+	],
+	"rules": {
+		"no-console": ["warn"],
+		"import/order": [
+			"warn",
+			{
+				"newlines-between": "always",
+				"groups": [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					["sibling", "index"]
+				]
+			}
+		]
+	},
+	"overrides": [
+		{
+			"files": ["sds.js", "serviceWorker.js"],
+			"rules": {
+				"no-console": "off",
+				"no-unused-vars":"off",
+				"strict":"off"
+			}
+		}
+	]
+}
